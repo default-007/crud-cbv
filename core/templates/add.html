@@ -2,23 +2,27 @@
 {% load widget_tweaks %}
 {% block content %}
 
-<div class="container">
-  <form method="post" novalidate>
-    {% csrf_token %}
-    {% for field in form.visible_fields %}
-    <div class="form-group mb-3">
-      <label for="{{field.id_for_label}}" class="form-label">{{field.label}}</label>
-      {{field|add_class:'form-control'}}
-      {% for error in field.errors %}
-      <span class="help-block">{{error}}</span>
+<div class="container pt-5">
+  <h5>Add Post</h5>
+  <br>
+  <div>
+    <form method="post" novalidate>
+      {% csrf_token %}
+      {% for field in form.visible_fields %}
+      <div class="form-group mb-3">
+        <label for="{{field.id_for_label}}" class="form-label">{{field.label}}</label>
+        {{field|add_class:'form-control'}}
+        {% for error in field.errors %}
+        <span class="help-block">{{error}}</span>
+        {% endfor %}
+      </div>
       {% endfor %}
-    </div>
-    {% endfor %}
-    <div class="form-group mb-3">
-      <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok"> Submit</span></button>
-      <a href="{% url 'core:posts' %}" class="btn btn-primary">Cancel </a>
-    </div>
-  </form>
+      <div class="form-group mb-3">
+        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok"> Submit</span></button>
+        <a href="{% url 'core:posts' %}" class="btn btn-primary">Cancel </a>
+      </div>
+    </form>
+  </div>
 </div>
 
 {% endblock %}
