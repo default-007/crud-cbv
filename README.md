@@ -14,19 +14,12 @@ Click [View Site](https://awwwards-007.herokuapp.com/) to visit the site
 
 ###### Home page
 
-<img src="https://raw.githubusercontent.com/default-007/awwwards/master/static/images/landing.png">
- 
- ###### Rating of a post
-<img src="https://raw.githubusercontent.com/default-007/awwwards/master/static/images/profile.png">
-
 ## User Story
 
-- A user can view posted projects and their details.
-- A user can post a project to be rated/reviewed.
-- A user can rate/ review other users' projects.
-- Search for projects.
-- View projects overall score.
-- A user can view their profile page.
+- A user can view posted posts and their details.
+- A user can create a post.
+- A user can update a post.
+- A user can delete a post.
 
 ## Setup and Installation
 
@@ -61,7 +54,7 @@ pip install -r requirements.txt
 SetUp your database User,Password, Host then make migrate
 
 ```bash
-python manage.py makemigrations instagram
+python manage.py makemigrations
 ```
 
 Now Migrate
@@ -90,9 +83,9 @@ Open the application on your browser `127.0.0.1:8000`.
 
 ## Technology used
 
-- [Python3.6](https://www.python.org/)
+- [Python3.10](https://www.python.org/)
 - [Django 4.0](https://docs.djangoproject.com/en/4.0/)
-- [Heroku](https://heroku.com)
+- [Django rest framework](https://heroku.com)
 
 ## Known Bugs
 
@@ -104,5 +97,5 @@ If you have any question or contributions, please email me at [brianokola@gmail.
 
 ## License
 
-- [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/default-007/crud-cbv/master/LICENSE)
+- [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/default-007/awwwards/blob/master/LICENSE)
 - Copyright (c) 2019 **Brian Otieno**
