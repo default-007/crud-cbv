@@ -22,5 +22,5 @@ class PostsView(ListView):
 class AddView(CreateView):
   model=Core
   template_name = 'add.html'
-  fields = '__add__'
+  fields = '__all__'
   success_url = reverse_lazy('core:posts')
