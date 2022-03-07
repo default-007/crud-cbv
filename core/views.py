@@ -2,7 +2,7 @@ from dataclasses import fields
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from .models import *
-from django.views.generic import ListView, DetailView, UpdateView, CreateView
+from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 # Create your views here.
 class IndexView(ListView):
   model = Core
@@ -31,3 +31,9 @@ class EditView(UpdateView):
   fields = '__all__'
   pk_url_kwargs = 'pk'
   success_url = reverse_lazy('core:posts')
+
+class DeleteView(DeleteView):
+  model=Core
+  pk_url_kwargs = 'pk'
+  success_url = reverse_lazy('core:posts')
+  template_name = 'confirm-delete.html'

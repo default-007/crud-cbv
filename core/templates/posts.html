@@ -37,7 +37,7 @@
               <div class="btn-group">
                 <a href="{{post.get_absolute_url}}" class="btn btn-sm btn-primary" role="button">View</a>
                 <a href="{% url 'core:edit' post.pk %}" class="btn btn-sm btn-primary" role="button">Edit</a>
-                <a href="" class="btn btn-sm btn-secondary" role="button">Delete</a>
+                <a href="{% url 'core:delete' post.pk %}" class="btn btn-sm btn-secondary" role="button">Delete</a>
               </div>
 
             </div>
