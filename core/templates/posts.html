@@ -36,8 +36,8 @@
               <h2 class="card-title h4"><a href="{% url 'core:single' post.pk %}">{{post.title}}</a></h2>
               <div class="btn-group">
                 <a href="{{post.get_absolute_url}}" class="btn btn-sm btn-primary" role="button">View</a>
-                <!-- <a href="" class="btn btn-sm btn-primary" role="button">Edit</a>
-                <a href="" class="btn btn-sm btn-secondary" role="button">Delete</a> -->
+                <a href="{% url 'core:edit' post.pk %}" class="btn btn-sm btn-primary" role="button">Edit</a>
+                <a href="" class="btn btn-sm btn-secondary" role="button">Delete</a>
               </div>
 
             </div>

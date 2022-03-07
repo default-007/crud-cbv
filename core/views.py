@@ -24,3 +24,10 @@ class AddView(CreateView):
   template_name = 'add.html'
   fields = '__all__'
   success_url = reverse_lazy('core:posts')
+
+class EditView(UpdateView):
+  model=Core
+  template_name = 'edit.html'
+  fields = '__all__'
+  pk_url_kwargs = 'pk'
+  success_url = reverse_lazy('core:posts')
